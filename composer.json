@@ -1,0 +1,12 @@
+{
+    "name": "alva/sql-remove-html",
+    "description": "Copy database column in a new one with HTML tags removed",
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "authors": [
+        {
+            "name": "Alva Vially"
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+<?php
+echo getenv("HOME") . PHP_EOL;
