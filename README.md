@@ -1,6 +1,7 @@
 # sql-remove-html
 Copy a database column to a new one with HTML tags removed. Currently only works with SQLite databases.
 ## Usage
+* `composer require`
 * Copy `.env.sample` to `.env`
 * Fill the `.env` variables as follow :
     - **SRH_DATABASE** : Path to your database
