@@ -8,5 +8,11 @@
         {
             "name": "Alva Vially"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "./",
+            "Dotenv\\": "/vendor/vlucas/phpdotenv/src/"
+        }
+    }
 }

@@ -1,2 +1,22 @@
 <?php
-echo getenv("HOME") . PHP_EOL;
+
+require './vendor/autoload.php';
+require './Database.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$dotenv->required(
+    [
+        'SRH_DATABASE',
+        'SRH_TABLE',
+        'SRH_ORIGINAL_COL',
+        'SRH_COPY_COL'
+    ])->notEmpty();
+
+$db = new Database();
+$db->createColumn($_ENV['SRH_TABLE'], $_ENV['SRH_COPY_COL']);
+$db->htmlLessCopy(
+    $_ENV['SRH_ORIGINAL_COL'],
+    $_ENV['SRH_COPY_COL'],
+    $_ENV['SRH_TABLE']
+);
