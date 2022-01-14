@@ -41,6 +41,7 @@ class Database
             $plaindesc = str_replace('<', ' <', $article['description']);
             $plaindesc = strip_tags($plaindesc);
             $plaindesc = preg_replace('/\s\s+/', ' ', $plaindesc);
+            $plaindesc = preg_replace('/^\s|\s$/', '', $plaindesc);
             $request->execute([
                 $plaindesc,
                 $article['id']
